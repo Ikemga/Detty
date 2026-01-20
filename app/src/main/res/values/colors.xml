@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gris">#F5F5F5</color>    <!-- Bg principal-->
+    <color name="blue">#1976D2</color>    <!-- ToolBar and bnt add , paiement-->
+    <color name="vert">#4CAF50</color>    <!-- succès, payé-->
+    <color name="rouge">#F44336</color>   <!-- warning, allert, impayé-->
+    <color name="bleuClair">#ADD8E6</color>   <!-- bgColor editText-->
+    <color name="bleuCiel">#30B2E6</color>   <!-- bgColor editText-->
+
+
+    <!--<color name="rougeclair">#f59999</color>    -->
+    <color name="rougeclaire">#f7b3b3</color>
+
+    <!--<color name="vertclaire">#E3F5E0</color>    -->
+    <color name="vertclai">#C9EBC6</color>
+
+</resources>
