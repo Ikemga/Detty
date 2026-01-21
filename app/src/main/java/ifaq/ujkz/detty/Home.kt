@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.viewpager2.widget.WindowInsetsApplier.install
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Home : AppCompatActivity() {
@@ -58,6 +59,20 @@ class Home : AppCompatActivity() {
             else -> return false
         }
     }
+
+    /**
+    private fun getClient(){
+        val supabase = createSupabaseClient(
+            supabaseUrl = "https://xyzcompany.supabase.co",
+            supabaseKey = "publishable-or-anon-key"
+        ) {
+            install(Auth)
+            install(Postgrest)
+            //install other modules
+        }
+
+    }
+     */
 
 
 }

@@ -58,8 +58,14 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
 
     /**
-     *  implementation("io.github.jan-tennert.supabase:postgrest-kt:2.2.1")
-     *     implementation("io.github.jan-tennert.supabase:auth-kt:2.2.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.10.0-RC")
+    implementation("io.github.jan-tennert.supabase:postgrest-kt:2.2.1")
+
+
+    implementation("io.ktor:ktor-client-cio:2.3.3")
+     *
+     *  implementation("io.github.jan-tennert.supabase:auth-kt:2.2.1")
+     *  implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.10.0-RC")
      * **/
 
 
