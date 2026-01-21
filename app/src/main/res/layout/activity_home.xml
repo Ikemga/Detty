@@ -214,7 +214,7 @@
             android:id="@+id/bnt_addclient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="150dp"
             android:layout_marginRight="20dp"
             android:padding="10dp"
             app:backgroundTint="@color/blue"
@@ -226,6 +226,17 @@
             app:cornerRadius="10dp"
             android:layout_gravity="bottom|end"
             android:elevation="5dp"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="?android:attr/windowBackground"
+            app:menu="@menu/bottom_nav_menu"
+            android:layout_gravity="bottom|end"/>
+
+
     </FrameLayout>
 
 </LinearLayout>

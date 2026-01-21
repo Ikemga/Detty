@@ -53,4 +53,16 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("androidx.recyclerview:recyclerview:1.3.2")
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+
+    /**
+     *  implementation("io.github.jan-tennert.supabase:postgrest-kt:2.2.1")
+     *     implementation("io.github.jan-tennert.supabase:auth-kt:2.2.1")
+     * **/
+
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
 }

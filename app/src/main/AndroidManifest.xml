@@ -14,6 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Detty">
         <activity
+            android:name=".HistoriqueDay"
+            android:exported="false" />
+        <activity
+            android:name=".Profil"
+            android:exported="false" />
+        <activity
+            android:name=".HIstorique"
+            android:exported="false" />
+        <activity
+            android:name=".Paiement"
+            android:exported="false" />
+        <activity
             android:name=".Dette"
             android:exported="false" />
         <activity

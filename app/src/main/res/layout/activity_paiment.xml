@@ -62,7 +62,7 @@
                 android:inputType="number"
                 android:text="1.300 FCFA"
                 android:fontFamily="@font/robotosemicondensedblack"
-                android:textColor="@color/rouge"
+                android:textColor="@color/vert"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:padding="20dp" />
@@ -150,7 +150,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:padding="20dp"
-        app:backgroundTint="@color/rougeclaire"
+        app:backgroundTint="@color/vertclai"
         android:text="Terminer"
         android:textStyle="bold"
         android:textColor="@color/white"
