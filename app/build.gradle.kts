@@ -56,20 +56,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    /*
-    * Problème de : java.lang.IllegalArgumentException: source must not be null
-    *
-    * ====== Etape 1 =====
-    * ============= J'ai changer les versions des élements suivants dans : libs.versions.tom =============
-    * kotlin = "2.2.20"
-    * composeBom = "2025.09.01"
-    * okhttp = "5.1.0"
-    *
-    * ====== Etape 2 =====
-    * Dans le build.gradle.kts, il faut ajouter ce qui suit:
-    *
-    * implementation("com.squareup.okhttp3:okhttp:4.12.0")
-    **/
+
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
 
     implementation("androidx.recyclerview:recyclerview:1.3.2")
