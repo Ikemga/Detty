@@ -71,6 +71,7 @@
                 app:hintTextColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_NomComplet"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:drawableTint="@color/blue"
@@ -122,6 +123,7 @@
                     app:hintTextColor="@color/black">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_codePays"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:drawableTint="@color/blue"
@@ -147,6 +149,7 @@
                     app:hintTextColor="@color/black">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_Telephone"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:drawableTint="@color/blue"
@@ -194,6 +197,7 @@
                 app:hintTextColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_Adresse"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:drawableTint="@color/blue"

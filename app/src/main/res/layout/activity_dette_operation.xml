@@ -17,7 +17,7 @@
         android:background="@color/blue">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/mt_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:title="Client Name"
@@ -54,6 +54,7 @@
 
         <!-- la couleur devient rouge si supérieur à 0 et verte si égale à O -->
         <TextView
+            android:id="@+id/tv_Solde"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/robotosemicondensedblack"
@@ -64,93 +65,6 @@
     </LinearLayout>
 
     <!-- Recherche barre-->
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:background="@drawable/roud_border_all"
-        android:elevation="1dp">
-
-        <!-- Action button -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:gravity="center">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginRight="10dp">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Appeler"
-                    android:layout_gravity="center"
-                    android:textColor="@color/blue"
-                    android:fontFamily="@font/robotosemicondensedlight"
-                    android:textSize="16sp"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginRight="10dp">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Appeler"
-                    android:layout_gravity="center"
-                    android:textColor="@color/blue"
-                    android:fontFamily="@font/robotosemicondensedlight"
-                    android:textSize="16sp"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginRight="10dp">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Appeler"
-                    android:layout_gravity="center"
-                    android:textColor="@color/blue"
-                    android:fontFamily="@font/robotosemicondensedlight"
-                    android:textSize="16sp"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -182,9 +96,20 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tv_empty_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aucune opération pour ce client"
+        android:textColor="@color/gris"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        tools:visibility="visible"/>
     <!-- Liste des opérations -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewClients"
+        android:id="@+id/recyclerViewOpération"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -194,7 +119,7 @@
         android:background="@drawable/roud_border_all"
         android:clipToPadding="false"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_client"
+        tools:listitem="@layout/item_dette_operation"
         tools:itemCount="10"/>
 
 
@@ -203,10 +128,11 @@
         android:layout_height="wrap_content"
         android:rowCount="1"
         android:columnCount="2"
+        android:layout_marginBottom="50dp"
         android:layout_margin="20dp">
 
         <Button
-            android:id="@+id/bnt_dette"
+            android:id="@+id/bnt_paie"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -224,7 +150,7 @@
             app:cornerRadius="10dp"/>
 
         <Button
-            android:id="@+id/bnt_pai"
+            android:id="@+id/bnt_dette"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_column="1"

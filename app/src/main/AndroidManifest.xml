@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -16,37 +17,35 @@
         <activity
             android:name=".HistoriqueDay"
             android:exported="false" />
-        <activity
-            android:name=".Profil"
-            android:exported="false" />
-        <activity
-            android:name=".HIstorique"
-            android:exported="false" />
-        <activity
-            android:name=".Paiement"
-            android:exported="false" />
+
         <activity
             android:name=".Dette"
             android:exported="false" />
+
+        <activity
+            android:name=".Paiment"
+            android:exported="false" />
+
         <activity
             android:name=".DetteOperation"
             android:exported="false" />
+
         <activity
             android:name=".AjouterClient"
             android:exported="false" />
+
         <activity
             android:name=".AddClientForm"
             android:exported="false" />
+
         <activity
             android:name=".Home"
             android:exported="false" />
+
         <activity
             android:name=".SingIn"
             android:exported="false" />
-        <activity
-            android:name=".SignIn"
-            android:exported="false"
-            android:theme="@style/Theme.Detty" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

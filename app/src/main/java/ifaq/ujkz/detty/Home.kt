@@ -1,18 +1,13 @@
 package ifaq.ujkz.detty
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.viewpager2.widget.WindowInsetsApplier.install
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlin.text.replace
 
 class Home : AppCompatActivity() {
-    private lateinit var AddClient: Button
     private lateinit var navbutton: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,59 +15,36 @@ class Home : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_home)
 
-        navbutton = findViewById<BottomNavigationView>(R.id.bottomNavigation)
-        AddClient = findViewById<Button>(R.id.bnt_addclient)
-
-        AddClient.setOnClickListener {
-            open_client_add_form()
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, HomeFragment())
+                .commit()
         }
 
-        navbutton.setOnItemSelectedListener ( ::open_activity )
-
+        initNavigation()
     }
-    /**
-     * Function open client addition formulaire
-     * */
+        private fun initNavigation() {
+            navbutton = findViewById<BottomNavigationView>(R.id.bottomNavigation)
+            navbutton.setOnItemSelectedListener ( ::open_activity )
 
-    private fun open_client_add_form(){
-        val open = Intent(this,AddClientForm::class.java)
-        startActivity(open)
-    }
+        }
 
     private fun open_activity(item: MenuItem):Boolean{
-        when(item.itemId) {
-            R.id.home -> {
-                // ouvrir fragment ou activity Home
-                startActivity(Intent(this, Home::class.java))
-                return true
-            }
-            R.id.historique -> {
-                // ouvrir fragment ou activity Profile
-                startActivity(Intent(this, Historique::class.java))
-                return true
-            }
-            R.id.profile -> {
-                // ouvrir fragment ou activity Profile
-                startActivity(Intent(this, Home::class.java))
-                return true
-            }
-            else -> return false
+        val fragment = when (item.itemId) {
+            R.id.home -> HomeFragment()
+            R.id.historique -> HistoriqueFragment()
+            R.id.profile -> ProfilFragment()
+            else -> null
+        }
+        return if (fragment != null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .commit()
+            true
+        } else {
+            false
         }
     }
-
-    /**
-    private fun getClient(){
-        val supabase = createSupabaseClient(
-            supabaseUrl = "https://xyzcompany.supabase.co",
-            supabaseKey = "publishable-or-anon-key"
-        ) {
-            install(Auth)
-            install(Postgrest)
-            //install other modules
-        }
-
-    }
-     */
-
-
 }
+
+

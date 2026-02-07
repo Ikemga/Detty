@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import ifaq.ujkz.detty.databinding.ActivityAddClientFormBinding
 
 class AddClientForm : AppCompatActivity() {
 
@@ -14,6 +15,8 @@ class AddClientForm : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        //bundleVar = ActivityAddClientFormBinding.inflate(layoutInflater)
+        //setContentView(bundleVar.root)
         setContentView(R.layout.activity_add_client_form)
 
         add = findViewById<Button>(R.id.bnt_addclient)
